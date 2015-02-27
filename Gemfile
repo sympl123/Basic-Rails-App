@@ -30,6 +30,9 @@ gem 'bootstrap-sass'
    gem 'sqlite3'
  end
 
+ group :development do
+   gem "rails-erd"
+ end 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
