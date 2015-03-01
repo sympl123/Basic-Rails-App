@@ -16,6 +16,13 @@
      body: Faker::Lorem.paragraph
    )
  end
+
+1.times do
+   Post.create!(
+     title:  "hi",
+     body:   "bye"
+   )
+ end
  
  puts "Seed finished"
  puts "#{Post.count} posts created"
