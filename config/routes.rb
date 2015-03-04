@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   
-  get 'advertisement/index' => 'advertisement#index' 
+  devise_for :users
+
+  resources :advertisement
+  get 'advertisement/index' => 'advertisement#index'
 
   get 'advertisement/show' => 'advertisement#show'
+  
 
   resources :posts 
   get 'about' => 'welcome#about'
