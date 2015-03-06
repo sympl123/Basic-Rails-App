@@ -21,14 +21,6 @@ ActiveRecord::Schema.define(version: 20150304013934) do
     t.datetime "updated_at"
   end
 
-  create_table "advertisemnts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "copy"
-    t.integer  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "post_id"

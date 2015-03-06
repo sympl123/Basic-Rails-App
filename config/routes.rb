@@ -2,13 +2,9 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  resources :advertisement
-  get 'advertisement/index' => 'advertisement#index'
+  resources :advertisements, :only => [:index, :show]
+  resources :posts
 
-  get 'advertisement/show' => 'advertisement#show'
-  
-
-  resources :posts 
   get 'about' => 'welcome#about'
  
   root to: 'welcome#index' 
