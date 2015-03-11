@@ -9,6 +9,8 @@ Rails.application.routes.draw do
         resources :posts, except: [:index]
       end
 
+  resource :summaries, :only => [:create, :show]
+
   get 'about' => 'welcome#about'
  
   root to: 'welcome#index' 
