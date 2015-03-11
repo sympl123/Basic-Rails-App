@@ -12,7 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'faker' 
 
 gem 'devise'
-
+gem 'pundit'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
