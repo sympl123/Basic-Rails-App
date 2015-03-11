@@ -15,7 +15,7 @@
 ActiveRecord::Schema.define(version: 20150308173329) do
 =======
 ActiveRecord::Schema.define(version: 20150309162708) do
->>>>>>> nesting-posts
+
 
   create_table "advertisements", force: :cascade do |t|
     t.string   "title"
