@@ -1,2 +1,2 @@
- class PostPolicy < ApplicationPolicy
- end
+class PostPolicy < ApplicationPolicy 
+end 
