@@ -13,6 +13,7 @@ gem 'faker'
 
 gem 'devise'
 gem 'pundit'
+gem 'redcarpet'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
