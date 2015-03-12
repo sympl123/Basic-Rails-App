@@ -1,12 +1,9 @@
 class PostsController < ApplicationController
-<<<<<<< HEAD
   def index
     @posts = Post.all
         authorize @posts
         @posts = policy_scope(Post)
   end
-=======
->>>>>>> nesting-posts
 
   def show
      @post = Post.find(params[:id])
