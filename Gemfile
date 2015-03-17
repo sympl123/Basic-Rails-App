@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'faker' 
-
+gem 'will_paginate', '~> 3.0.5'
 gem 'devise'
 gem 'pundit'
 gem 'redcarpet'
