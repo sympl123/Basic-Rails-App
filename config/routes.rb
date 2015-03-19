@@ -12,9 +12,9 @@ Rails.application.routes.draw do
         resources :posts, except: [:index]
       end
 
-      resources :posts do
-    resources :comments, :only => [:create]
-  end
+    resources :posts do
+      resources :comments, :only => [:create]
+    end 
 
 
 

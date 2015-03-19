@@ -1,9 +1,7 @@
 <h1>New Comment</h1>
  
- <%= form_for @post do |f| %>
-   <%= f.label :title %>
-   <%= f.text_field :title %>
- 
+ <%= form_for @comment do |f| %>
+
    <%= f.label :body %>
    <%= f.text_area :body %>
  
@@ -18,7 +16,7 @@
    </div>
    <div class="col-md-8">
    
-    <%= render partial: 'form', locals: { topic: @topic, post: @post } %>
+    <%= render partial: 'form', locals: {comment: @comment } %>
     
    </div>
  </div>
