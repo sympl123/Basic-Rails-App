@@ -7,15 +7,12 @@ Rails.application.routes.draw do
   resources :users, only: [:update]
 
   resources :advertisements, :only => [:index, :show]
-     
-      resources :topics do
-        resources :posts, except: [:index]
+
+    resources :topics do
+      resources :posts, except: [:index] do
+          resources :comments, only: [:create, :destroy]
       end
-
-    resources :posts do
-      resources :comments, :only => [:create]
-    end 
-
+    end
 
 
   get 'about' => 'welcome#about'
