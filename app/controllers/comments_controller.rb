@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params.require(:comment).permit(:body))
     
     authorize @comment 
-
     if @comment.save
       flash[:notice] = "Comment was saved."
       redirect_to @comment

@@ -8,10 +8,13 @@
        <%= @post.user.name %>
      </small>
     <p><%= markdown_to_html @post.body %></p>
+
     <p><% @post.comments.each do |comment| %> 
           <%= render comment %> 
        <% end %> 
     </p> 
+
+    <p><%= render "comments/form" %></p>
     
   </div>
   <div class="col-md-4">
