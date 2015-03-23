@@ -5,6 +5,18 @@ class Post < ActiveRecord::Base
     belongs_to :topic
    
 
+    def up_votes
+      self.votes.where(value: 1).count
+    end
+
+    def down_votes
+      self.votes.where(value: -1).count
+    end
+
+    def points
+      self.votes.sum(:value).to_i
+    end
+
   scope :ordered_by_title, -> { order("posts.title DESC") }
   scope :ordered_by_reverse_created_at, -> { order("posts.created_at DESC") }
 
