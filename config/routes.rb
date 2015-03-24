@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
 
+  get 'votes/new'
+
+  get 'votes/create'
+
   get 'comments/new'
 
   devise_for :users 
