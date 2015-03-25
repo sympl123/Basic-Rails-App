@@ -3,7 +3,8 @@ class Post < ActiveRecord::Base
   has_many :votes, dependent: :destroy 
   belongs_to :user
     belongs_to :topic
-  
+
+ attr_accessor :value, :post
 
     def up_votes
       self.votes.where(value: 1).count
