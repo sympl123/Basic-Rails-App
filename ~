@@ -1,0 +1,14 @@
+minor update 
+Merge branch 'voting-checkpoint'
+
+# minor updatePlease enter a minor update
+
+minor update 
+:wq
+commit message to explain why this merge is necessary,
+add!
+:dd!
+ especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
