@@ -4,7 +4,6 @@ class Post < ActiveRecord::Base
   belongs_to :user
     belongs_to :topic
 
- attr_accessor :value, :post
 
     def up_votes
       self.votes.where(value: 1).count
