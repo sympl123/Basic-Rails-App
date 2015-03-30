@@ -12,15 +12,14 @@ Rails.application.routes.draw do
 
   resources :advertisements, :only => [:index, :show]
 
-    resources :topics do
-      resources :posts, except: [:index] 
-    end  
-
-    resources :posts, only: [] do
+  resources :topics do
+    resources :posts, except: [:index], controller: 'topics/posts' do
       resources :comments, only: [:create, :destroy]
-        post '/up-vote' => 'votes#up_vote', as: :up_vote
-        post '/down-vote' => 'votes#down_vote', as: :down_vote
+      get '/up-vote' => 'votes#up_vote', as: :up_vote
+      get '/down-vote' => 'votes#down_vote', as: :down_vote
+      resources :favorites, only: [:create, :destroy]
     end
+  end 
     
   get 'about' => 'welcome#about'
  

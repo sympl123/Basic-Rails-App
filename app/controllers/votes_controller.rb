@@ -26,11 +26,11 @@ class VotesController < ApplicationController
 private
       
       def load_post_and_vote
-         @post = Post.find(params[:post_id])
+         @topic = Topic.find(params[:topic_id])
+         @post = @topic.posts.find(params[:post_id])
          @vote = @post.votes.where(user_id: current_user.id).first
       end
-
-
+      
       def update_vote!(new_value)
           if @vote # if it exists, update it
                 authorize @vote, :update?
